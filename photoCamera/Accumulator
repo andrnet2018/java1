@@ -1,0 +1,34 @@
+package homeExerciseLesson9.photoCamera;
+
+public class Accumulator {
+
+    private double energy;
+    private double currentEnergy;
+
+    public Accumulator(int energy) {
+        this.energy = energy;
+        this.currentEnergy = energy;
+    }
+
+    public void reduceEnergy() {
+        currentEnergy = currentEnergy - 5;
+    }
+
+    public double getEnergy() {
+        return currentEnergy;
+    }
+
+    public void fullChange() {
+        this.currentEnergy = energy;
+    }
+
+    public boolean isFullChange() {
+        return this.currentEnergy == energy;
+    }
+
+    public boolean isEnoughtEnergy(){
+        //hotja bi 5% ot pervonacaljnoj emkosti akamuljatora
+        return (this.currentEnergy >= 5);
+    }
+
+}
